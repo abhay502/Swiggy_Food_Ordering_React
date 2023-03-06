@@ -1,0 +1,42 @@
+.logo{
+    width: 200px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    border:2px solid black;
+}
+
+.nav-items>ul{
+    list-style-type: none;
+    display: flex;
+}
+.nav-items>ul>li{
+    padding: 10px;
+}
+.cards{
+    width: 15rem;
+    /* border: 1px solid black; */
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    
+    padding: 10px;
+}
+.cards>img{
+    width: 100%;
+}
+.cardList{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 8rem;
+  
+}
+.location{
+    color: rgb(107, 108, 108);
+    font-weight: lighter;
+}
+.search-container{
+    margin-left: 74rem;
+}
