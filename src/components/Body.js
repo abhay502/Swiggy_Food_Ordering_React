@@ -10,7 +10,7 @@ const Body = () => {
    
     const [restaurants,setRestaurants]=useState(RestaurantList)
     const [searchText,setSearchText]=useState("") 
-     
+     console.log("render()")
     return (
         <>
             <div className="search-container">
@@ -18,17 +18,17 @@ const Body = () => {
                  value={searchText} aria-describedby="search-addon"
                  onChange={(e)=>{setSearchText(e.target.value)
                 
-                    const data= filterData(searchText,restaurants)
+                    const data= filterData(searchText,RestaurantList)
                     setRestaurants(data)
                 }
-                  
+                     
                 }
                        
                  />
                 <button className="search-btn" 
                 onClick={()=>{
                   const data= filterData(searchText,restaurants) 
-                  setRestaurants(data)
+                  setRestaurants(data) 
                 }}>Search</button>
             </div>  
             <div className="cardList">   
