@@ -40,3 +40,38 @@
 .search-container{
     margin-left: 74rem;
 }
+.box {
+    width: 100%;
+    height: 600px;
+    background-color: #ffffff;
+    position: relative;
+  }
+  
+  .shimmer {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 200px;
+    background-color: rgb(234, 234, 234);
+    animation: shimmer 0.4s infinite;
+  }
+  .shimmer2 {
+    position: absolute;
+    margin-top: 300px;
+    left: -50%;
+    width: 50%;
+    height: 200px;
+    background-color: rgb(234, 234, 234);
+    animation: shimmer 0.6s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
