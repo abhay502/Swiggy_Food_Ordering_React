@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const loginUser=()=>{
     return true;
@@ -10,7 +11,7 @@ const Title=()=>(
    <img src="https://aartisto.com/wp-content/uploads/2020/11/swiggy-logo.png" className="logo" alt="swiggylogo" />
    </a>
 ); 
-
+ 
 
 
 const HeaderComponent=()=>{
@@ -18,10 +19,10 @@ const HeaderComponent=()=>{
     return(
         <div className="header">
             <Title/> 
-            <div className="nav-items">
+            <div className="nav-items"> 
                 <ul>
-                    <li>Home</li> 
-                    <li>About</li> 
+                    <Link to="/"><li>Home</li></Link>  
+                    <Link to="/about"> <li>About</li>  </Link>  
                     <li>Contact</li>
                     <li>Cart</li>
                 </ul>
