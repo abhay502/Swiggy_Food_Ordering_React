@@ -2,16 +2,18 @@
 const Shimmer = () => {
     return (
         <>
-            <div class="box">
-                <div class="shimmer"></div>
-                <div class="shimmer2"></div>
+        <input  className="search-container" placeholder="Search" type="text"></input>
+            <div className="cardList">
+                
+                {Array(20).fill("").map((e,index)=>(<div key={index} className="shimmer"></div>))}
+                
 
             </div>
 
-
+ 
         </>
 
 
     )
 }
-export default Shimmer; 
+export default Shimmer;  

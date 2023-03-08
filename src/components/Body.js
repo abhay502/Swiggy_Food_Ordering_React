@@ -20,8 +20,8 @@ const Body = () => {
         axios.get("https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.623255499999999&lng=76.3810922&page_type=DESKTOP_WEB_LISTING")
             .then(response => {
                 console.log(response.data.data)
-                setAllRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
-                setFilteredRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
+                setAllRestaurants(response?.data?.data?.cards[0]?.data?.data?.cards)
+                setFilteredRestaurants(response?.data?.data?.cards[0]?.data?.data?.cards)
 
             }).catch(error => {
                 console.log(error)

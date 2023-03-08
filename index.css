@@ -31,6 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 8rem;
+    background-color: #ffffff;
   
 }
 .location{
@@ -40,38 +41,32 @@
 .search-container{
     margin-left: 74rem;
 }
-.box {
-    width: 100%;
-    height: 600px;
-    background-color: #ffffff;
-    position: relative;
-  }
+
   
-  .shimmer {
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 50%;
-    height: 200px;
-    background-color: rgb(234, 234, 234);
-    animation: shimmer 0.4s infinite;
+.shimmer {
+  margin-top: 55px;
+  margin: 8px;
+  width: 15rem;
+  height: 10rem;
+  background: linear-gradient(
+    to right,
+    rgba(212, 212, 212, 0.756) 0%,
+    rgba(236, 235, 235, 0.829) 20%,
+    rgba(212, 212, 212, 0.756) 40%
+  );
+  background-size: 600% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0%;
   }
-  .shimmer2 {
-    position: absolute;
-    margin-top: 300px;
-    left: -50%;
-    width: 50%;
-    height: 200px;
-    background-color: rgb(234, 234, 234);
-    animation: shimmer 0.6s infinite;
+  100% {
+    background-position: 100% 0%;
   }
-  
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
+}
+
+ 
+ 
   
