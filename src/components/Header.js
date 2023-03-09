@@ -23,7 +23,7 @@ const HeaderComponent=()=>{
                 <ul>
                     <Link to="/"><li>Home</li></Link>  
                     <Link to="/about"> <li>About</li>  </Link>  
-                    <li>Contact</li>
+                    <Link to="/contact"> <li>Contact</li> </Link> 
                     <li>Cart</li>
                 </ul>
                 {isLoggedIn? <button onClick={()=>setIsLoggedIn(false)}>Logout</button>:<button onClick={()=>setIsLoggedIn(true)}>Login</button>}

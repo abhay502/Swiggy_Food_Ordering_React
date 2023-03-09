@@ -37,6 +37,7 @@
 .location{
     color: rgb(107, 108, 108);
     font-weight: lighter;
+    line-height: 15px;
 }
 .search-container{
     margin-left: 74rem;
@@ -65,6 +66,19 @@
   100% {
     background-position: 100% 0%;
   }
+}
+.main{
+  font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+  margin-left: 25rem;
+}
+.location2{
+  color: rgb(107, 108, 108);
+    font-weight: lighter;
+    line-height: 1px;
+}
+.menu{
+  margin-top: 5rem;
+  margin-left: 25rem;
 }
 
  
