@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Cards from "./Cards";
 import axios from "axios";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 function filterData(searchText, restaurants) {
     // console.log(restaurants)
@@ -19,7 +20,7 @@ const Body = () => {
     async function getRestaurants() {
         axios.get("https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.623255499999999&lng=76.3810922&page_type=DESKTOP_WEB_LISTING")
             .then(response => {
-                console.log(response.data.data)
+                // console.log(response.data.data)
                 setAllRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
                 setFilteredRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
 
@@ -59,9 +60,12 @@ const Body = () => {
                 
                     {   filteredRestaurants?.length===0?<h1>No Restaurant Match Your Filter!🥲</h1>:
                         filteredRestaurants?.map((restaurant) => {
-
-                            return <Cards restaurant={restaurant} key={restaurant.data.id} />
-                        })
+                                return(
+                                    <Link to={"/restaurant/"+restaurant.data.id}  key={restaurant.data.id} >
+                                    <Cards restaurant={restaurant} />
+                                    </Link>
+                                )
+                        })       
                     }
                 </div>
             </>
