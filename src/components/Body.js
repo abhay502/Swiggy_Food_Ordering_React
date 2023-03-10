@@ -4,11 +4,8 @@ import Cards from "./Cards";
 import axios from "axios";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import { filterData } from "../utils/Helper";
 
-function filterData(searchText, restaurants) {
-    // console.log(restaurants)
-    return restaurants?.filter((restaurant) => restaurant?.data?.name?.toLowerCase()?.includes(searchText?.toLowerCase()))
-}
 const Body = () => {
     const [allRestaurants,setAllRestaurants]=useState([])
     const [filteredRestaurants, setFilteredRestaurants] = useState([])
@@ -16,8 +13,8 @@ const Body = () => {
 
     useEffect(() => {
         getRestaurants()
-    }, [])
-    async function getRestaurants() {
+    }, []) 
+    async function getRestaurants() {    
         axios.get("https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.623255499999999&lng=76.3810922&page_type=DESKTOP_WEB_LISTING")
             .then(response => {
                 // console.log(response.data.data)
@@ -27,10 +24,10 @@ const Body = () => {
             }).catch(error => {
                 console.log(error)
             }) 
- 
+  
     }
         if(!allRestaurants)return null;
-      
+    //   console.log(allRestaurants)
  
 
         return (allRestaurants?.length===0)?<Shimmer/>: ( 
@@ -47,7 +44,7 @@ const Body = () => {
                         }
 
                         } 
-        
+         
                     />
                     <button className="search-btn"
                         onClick={() => {

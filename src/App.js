@@ -8,6 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage"
 import RestaurantMenu from "./components/RestaurantMenu";
+import Profile from "./components/Profile";
 
 const AppLayout=()=>{
     return(
@@ -31,17 +32,23 @@ const appRouter=createBrowserRouter([ //createBrowserRouter takes an array of co
             },
             {
                 path:"/about",
-                element:<About/>
+                element:<About/>,
+                children:[
+                    {
+                        path:'profile',
+                        element:<Profile/>
+                    }
+                ]
             },
             {
-                path:"/contact",
+                path:"/contact", 
                 element:<Contact/>
             },
             {
                 path:"/restaurant/:id",
                 element:<RestaurantMenu/>
             }
-        ]
+        ] 
     },
    
 ])
@@ -49,7 +56,7 @@ const appRouter=createBrowserRouter([ //createBrowserRouter takes an array of co
 const root = ReactDOM.createRoot(document.getElementById('root'))            
 root.render(<RouterProvider router={appRouter} /> ); 
   
-
+   
  
 
   

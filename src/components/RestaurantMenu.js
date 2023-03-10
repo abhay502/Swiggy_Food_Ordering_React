@@ -37,11 +37,11 @@ const RestaurantMenu=()=>{
             <h3> {restaurant?.totalRatingsString}</h3>
 
             {restaurant?.aggregatedDiscountInfo?.descriptionList?.map((list)=>{
-                return(<h5>{list?.meta}  </h5>)
-            })}
+                return(<h5 key={list?.meta}>{list?.meta}  </h5>)
+            })} 
             
             </div>
-            
+             
             <div className="menu">
                 <h1>menu</h1>
                 {restaurant && restaurant.menu && (Object.values(restaurant.menu.items).map((item)=>{
