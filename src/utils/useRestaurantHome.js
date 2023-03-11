@@ -12,7 +12,7 @@ const useRestaurantHome = (searchText) => {
         getRestaurants()
     }, [])
 
-    useEffect(() => {
+    useEffect(() => {  
         const data = filterData(searchText, allRestaurants)
         setFilteredRestaurants(data)
     }, [searchText, allRestaurants])    
@@ -20,10 +20,10 @@ const useRestaurantHome = (searchText) => {
     async function getRestaurants() {
         axios.get(GET_ALL_RESTUARANT)
             .then(response => {
-                setAllRestaurants(response?.data?.data?.cards[0]?.data?.data?.cards)
-                setFilteredRestaurants(response?.data?.data?.cards[0]?.data?.data?.cards)
+                setAllRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
+                setFilteredRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
             }).catch(error => {
-                console.log(error)
+                console.log(error) 
             })
     }
 
