@@ -16,12 +16,12 @@ const About = lazy(() => import("./components/About"))
 
 const AppLayout = () => {
     return (
-        <>
+        <>   
             <HeaderComponent />
             <Outlet />
             <Footer />
-        </>
-    )
+        </>   
+    ) 
 }
 
 const appRouter = createBrowserRouter([ //createBrowserRouter takes an array of configuration, each configuration is an object ({path:"/",element:<AppLayout/>})
