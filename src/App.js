@@ -12,17 +12,17 @@ import Shimmer from "./components/Shimmer";
 // import Instamart from "./components/Instamart"
 
 const Instamart = lazy(() => import("./components/Instamart"))
-const About = lazy(() => import("./components/About"))
-
+const About = lazy(() => import("./components/About"))   
+ 
 const AppLayout = () => {
-    return (
+    return (    
         <>   
             <HeaderComponent />
             <Outlet />
-            <Footer />
-        </>   
-    ) 
-}
+            <Footer /> 
+        </>    
+    )  
+}  
 
 const appRouter = createBrowserRouter([ //createBrowserRouter takes an array of configuration, each configuration is an object ({path:"/",element:<AppLayout/>})
     {

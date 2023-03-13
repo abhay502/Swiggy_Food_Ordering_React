@@ -9,34 +9,32 @@ const loginUser=()=>{
 const Title=()=>(
    
     <a href="/">
-   <img src="https://aartisto.com/wp-content/uploads/2020/11/swiggy-logo.png" className="logo" alt="swiggylogo" />
+   <img src="https://aartisto.com/wp-content/uploads/2020/11/swiggy-logo.png" className="h-28" alt="swiggylogo" />
    </a>
 ); 
  
 
 
-const HeaderComponent=()=>{
+const HeaderComponent=()=>{ 
     const isOnline=useOnline()
     const [isLoggedIn,setIsLoggedIn]=useState(true);
     return(
-        <div className="header">
-            <Title/> 
-            <div className="nav-items"> 
-                <ul>
-                    <Link to="/"><li>Home</li></Link>  
-                    <Link to="/about"> <li>About</li>  </Link>  
-                   
-                    <Link to="/instamart"> <li>Instamart</li> </Link> 
-                    <li>Cart</li>
-                </ul>
-                {isOnline ? "✅" : "🔴"}
+        
+        <div className=" flex justify-between">
+             <Title/> 
+            <div className="nav-items ">   
+                <ul className="flex  py-10 ">
+                    <Link to="/"><li className="px-4 hover:text-white hover:bg-black ">Home</li></Link>  
+                    <Link to="/about"> <li className="px-2">About</li>  </Link>  
+                    
+                    <Link to="/instamart"> <li className="px-2">Instamart</li> </Link> 
+                    <li className="px-2">Cart</li>
+                </ul>  
+            </div>   
+                 <h1>{isOnline ? "✅" : "🔴"} </h1> 
                 {isLoggedIn? <button onClick={()=>setIsLoggedIn(false)}>Logout</button>:<button onClick={()=>setIsLoggedIn(true)}>Login</button>}
-                
-               
-            </div>
-           
-        </div>            
+        </div>             
     );  
-}; 
-
-export default HeaderComponent;
+};   
+  
+export default HeaderComponent; 
