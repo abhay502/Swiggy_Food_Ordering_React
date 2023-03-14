@@ -1,3 +1,5 @@
-# Namste_React_course_Live 🙏
+#Building food ordering app Swiggy  🙏
+##Technologies Used:
 
-Building food ordering app Swiggy
+
+
