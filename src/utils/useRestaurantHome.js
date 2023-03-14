@@ -16,8 +16,8 @@ const useRestaurantHome = (searchText) => {
         const data = filterData(searchText, allRestaurants)
         setFilteredRestaurants(data)
     }, [searchText, allRestaurants])    
-
-    async function getRestaurants() {
+ 
+    async function getRestaurants() { 
         axios.get(GET_ALL_RESTUARANT)
             .then(response => {
                 setAllRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)

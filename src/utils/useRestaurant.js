@@ -14,7 +14,7 @@ const useRestaurant=(params)=>{
         const data= await axios.get(FETCH_RESTAURANT_URL+params.id)
         setRestaurant(data?.data?.data)
     }
-
+    console.log(restaurant)
     return restaurant;
     
 }
