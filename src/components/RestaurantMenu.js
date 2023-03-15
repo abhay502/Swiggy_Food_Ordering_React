@@ -42,10 +42,10 @@ const RestaurantMenu = () => {
                         <div>
 
                         <h1>________________________________________ ______________________________</h1>
-                        <h3 className="font-semibold" key={item.id}>{item.category}({item.category.sum()})</h3>
+                        {/* <h3 className="font-semibold" key={item.id}>{item.category}({sum(item.category}))</h3> */}
                         <h1 className="font-semibold" key={item.id}>{item.name}</h1>
-                        <h1 className="font-medium" key={item.id}>₹{item.price/100}</h1>
-                        <button className="border-2 border-grey text-green-500 mx-96 px-5 rounded-md font-semibold shadow-md hover:border-orange-400 " >ADD</button>
+                        <h1 className="font-medium" key={item.name}>₹{item.price/100}</h1>
+                        <button  className="border-2 border-grey text-green-500 mx-96 px-5 rounded-md font-semibold shadow-md hover:border-orange-400 " >ADD</button>
                         </div>
                     )
                 }))}

@@ -15,6 +15,6 @@ const Cards=({restaurant})=>{ //here I'm destructuring props to {restaurant}
             
         </div>          
     ) 
-} 
+}  
   
 export default Cards;
