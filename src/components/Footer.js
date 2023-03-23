@@ -15,9 +15,9 @@ const Footer = () => {
             <div className="mt-3">
                 <div className="flex">
                     <ul className="mx-8 cursor-pointer">
-                        <li className="text-white mt-5">About</li>
+                        <li className="text-white mt-5">About</li> 
                         <li className="text-white mt-3">Team</li>
-                        <li className="text-white mt-3">Careers</li>
+                        <li className="text-white mt-3">Careers</li> 
                         <li className="text-white mt-3">Swiggy Blog</li>
                         <li className="text-white mt-3">Bug Bounty</li>
                         <li className="text-white mt-3">Swiggy One</li>

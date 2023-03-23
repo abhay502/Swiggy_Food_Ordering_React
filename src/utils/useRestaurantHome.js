@@ -22,6 +22,7 @@ const useRestaurantHome = (searchText) => {
             .then(response => {
                 setAllRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
                 setFilteredRestaurants(response?.data?.data?.cards[2]?.data?.data?.cards)
+                
             }).catch(error => {
                 console.log(error) 
             })

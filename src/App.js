@@ -9,6 +9,9 @@ import ErrorPage from "./components/ErrorPage"
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
+import { Provider } from "react-redux";
+import store from "./utils/store";
+
 // import Instamart from "./components/Instamart"
 
 const Instamart = lazy(() => import("./components/Instamart"))
@@ -16,11 +19,12 @@ const About = lazy(() => import("./components/About"))
  
 const AppLayout = () => {
     return (    
-        <>   
+        //this is how we provide react store to our entire application using Provider and passing store as its props and always use "store" name for props beacuse behind the scenes react uses that name for destructuring.
+        <Provider store={store}> 
             <HeaderComponent />
             <Outlet />
             <Footer /> 
-        </>    
+        </Provider>    
     )  
 }  
 

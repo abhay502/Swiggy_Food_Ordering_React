@@ -6,6 +6,7 @@ import { FETCH_RESTAURANT_URL } from "../constants";
 const useRestaurant=(params)=>{
 
     const [restaurant,setRestaurant]=useState(null)
+
     useEffect(()=>{
         getRestaurantInfo()
     },[])
@@ -13,6 +14,7 @@ const useRestaurant=(params)=>{
     async function getRestaurantInfo(){
         const data= await axios.get(FETCH_RESTAURANT_URL+params.id)
         setRestaurant(data?.data?.data)
+        console.log(data?.data?.data)
     }
     console.log(restaurant)
     return restaurant;
